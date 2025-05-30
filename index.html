@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetLocalizador</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <div class="container">
+    <h1>
+      <img src="PetLocalizador.png" alt="Logo PetLocalizador" style="max-width: 200px; width: 100%; height: auto; display: block; margin: 0 auto;">
+    </h1>
+
+    <input type="text" id="nomePet" placeholder="Nome do Pet">
+    <input type="text" id="raca" placeholder="Raça do Pet">
+    <input type="text" id="nomeDono" placeholder="Nome do Dono">
+    <input type="text" id="telefone" placeholder="Telefone para Contato">
+    <input type="text" id="endereco" placeholder="Endereço Completo">
+
+    <div class="buttons">
+      <button id="btnPreview">Gerar Pré-Visualização</button>
+      <button id="btnDownload" disabled>Baixar PDF</button>
+    </div>
+
+    <div id="qrCode" style="position:absolute; left:-9999px; width:0; height:0; overflow:hidden;"></div>
+
+    <h2>Pré-Visualização</h2>
+    <iframe id="pdfPreview"></iframe>
+  </div>
+
+  <script src="logo.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #e0f7ff, #ffffff);
+    color: #003f5c;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 63, 92, 0.1);
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #005b96;
+    margin-bottom: 1.5rem;
+}
+
+input, button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #009ddc;
+    box-shadow: 0 0 5px #009ddc44;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+button {
+    background-color: #009ddc;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    flex: 1 1 45%;
+    min-width: 120px;
+}
+
+button:hover {
+    background-color: #007bbf;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+iframe#pdfPreview {
+    border: 2px solid #009ddc;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 157, 220, 0.2);
+    margin-top: 1.5rem;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+iframe#pdfPreview:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 157, 220, 0.3);
+}
+
+#qrCode {
+    margin-top: 1.5rem;
+}
+
+/* ✅ Responsividade para telas menores */
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    iframe#pdfPreview {
+        height: 200px;
+    }
+}
